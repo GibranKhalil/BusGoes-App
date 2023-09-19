@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar{
+    background: linear-gradient(to bottom, #2E86C1 , #7546f7 );
+    color: #f2f2f2;
+  }
