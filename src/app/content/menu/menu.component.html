@@ -1,4 +1,5 @@
-<mat-toolbar>
+<div class="menu">
+  <mat-toolbar>
     <button (click)="showmenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon >menu</mat-icon>
     </button>
@@ -7,7 +8,9 @@
       
     </span>
     <span>
-      <button class="botao" *ngIf="deslogado" mat-raised-button color="primary">Entrar</button>
+      <button class="botao" routerLink="/login" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>login</mat-icon>Entrar</button>
+      <button class="botao" routerLink="/cadastro" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>person</mat-icon>Cadastrar</button>
         {{nome}}
     </span>
   </mat-toolbar>
+</div>

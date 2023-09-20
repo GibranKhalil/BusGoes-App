@@ -8,6 +8,7 @@
 
 .slick-prev:before, .slick-next:before{
   color: #000;
+
 }
   
   .img-container {
@@ -22,6 +23,7 @@
     height: auto;
     margin: 0 auto;
     justify-content: space-between;
+    
   }
 
   .slide {
@@ -72,6 +74,7 @@
     width: 30px; 
     height: 30px;
     line-height: 30px;
+    
   }
   
   .elementside{
@@ -206,5 +209,19 @@
 
 .sobre-devs{
   margin-bottom: 100px;
+}
+
+.custom-dots {
+  margin-top: 10px;
+}
+
+.custom-dots button {
+  background-color: #ccc; /* Cor de fundo dos dots */
+  width: 10px; /* Largura dos dots */
+  height: 10px; /* Altura dos dots */
+  margin: 0 5px; /* Margem entre os dots */
+  border: none; /* Remova as bordas se desejar */
+  border-radius: 50%; /* Para dots redondos */
+  cursor: pointer; /* Altere o cursor para indicar clicabilidade */
 }
 

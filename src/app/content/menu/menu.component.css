@@ -8,5 +8,10 @@
   }
 
   .botao{
+    margin-left: 20px;
     background-color: transparent;
+  }
+
+  .menu{
+    z-index: 9999;
   }

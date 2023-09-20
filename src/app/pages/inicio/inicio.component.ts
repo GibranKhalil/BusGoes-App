@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
@@ -6,12 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+
+  
+constructor(private render: Renderer2, private e: ElementRef){}
+
+rolar(id: string){
+  const elemento = this.e.nativeElement.querySelector(`#${id}`);
+  if(elemento){
+    elemento.scrollIntoView({behavior: 'smooth'});
+  }
+}
+
   slickConfig = {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    dots: true,
+    
   };
+
+
 
   slides = [
     { 

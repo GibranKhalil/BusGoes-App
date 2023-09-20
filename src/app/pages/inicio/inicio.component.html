@@ -10,7 +10,7 @@
         <p><mat-icon class="icon">check</mat-icon>Segurança</p>
 
       </div>
-      <button class="button" mat-raised-button color="primary">Confira os locais</button>
+      <button (click)="rolar('rolar')" class="button" mat-raised-button color="primary">Confira os locais</button>
 
     </div>
     <div class="img-inicio">
@@ -19,17 +19,17 @@
   </div>
 
   <div class="cards">
-    <h1 class="blue-text font-up bold-up">Veja os Municípios:</h1>
-    <ngx-slick-carousel class="carousel" [config]="slickConfig">
-      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <mat-card class="card-viagens">
+    <h1  id="rolar" class="blue-text font-up bold-up">Veja os Municípios:</h1>
+    <ngx-slick-carousel  class="carousel" [config]="slickConfig">
+      <div  ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <mat-card  class="card-viagens">
           <div class="img-container">
             <img [src]="slide.imageUrl" alt="Imagem do Slide" class="img">
           </div>
-          <mat-card-content class="viagens">
+          <mat-card-content  class="viagens">
             <div class="destino">
               <h1 class="font-down margin-top margin-bottom">{{slide.saida}}</h1>
-              <mat-icon>swap_vert</mat-icon>
+              <mat-icon >swap_vert</mat-icon>
               <p class="font-down margin-top" style="color: #1C2833 ;">{{slide.destino}}</p>
             </div>
             <div class="preco">
