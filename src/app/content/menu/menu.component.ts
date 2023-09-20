@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { SharedService } from 'src/app/shared/shared.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,16 +8,30 @@ import { Component, Input } from '@angular/core';
 })
 export class MenuComponent {
 
-  constructor(){
+  nome:any = '';
+  deslogado:boolean=true;
+
+  constructor(private shared:SharedService){
+    shared.getusuario().subscribe((retorno)=>{
+    this.nome = retorno;
+    if(this.nome == ''){
+      this.deslogado = true;
+    }
+    else{
+      this.deslogado = false;
+    }
+    }) //vê se o usuario está logado
   }
 
   @Input() Drawer:any;
 
-  nome:any = '';
+
+
 
   showmenu(){
     this.Drawer.toggle();
   }
+
 
 
 }

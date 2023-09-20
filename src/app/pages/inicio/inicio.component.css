@@ -71,16 +71,6 @@
     line-height: 30px;
   }
   
-
-  .slick-dots {
-    bottom: 10px;
-  }
-  
-
-  .slick-dots li.slick-active button:before {
-    color: black;
-  }
-  
   .inicio{
     display: flex;
     flex-direction: row;
@@ -115,6 +105,8 @@
 
 .icon{
     width: 20px;
+    color: #58D68D ; 
+    margin-right: 10px;
     height: 20px;
 }
 
@@ -132,6 +124,8 @@
 
   .cards{
     text-align: center;
+    height: 100%;
+    max-height: 600px;
   }
 
   .font-up{
@@ -162,4 +156,13 @@
 
   .gray{
     color:#ABB2B9 ;
+  }
+
+  .bilhetes{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    text-align: center;
+    align-items: left;
+    flex-direction: column;
   }

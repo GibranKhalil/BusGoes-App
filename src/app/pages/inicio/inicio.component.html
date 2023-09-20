@@ -4,9 +4,9 @@
         <h1 class="blue-text title">A Melhor plataforma para comprar passagens intermunicipais e recarregar os seus bilhetes</h1>
         <h2 class="blue-text sub-title">Conectando Destinos, Criando Memórias.</h2>
         <div class="checks">
-            <p><mat-icon class="icon" style="color: rgb(10, 218, 10); margin-right: 10px;">check</mat-icon>Facilidade</p>
-            <p><mat-icon class="icon" style="color: rgb(10, 218, 10); margin-right: 10px;">check</mat-icon>Praticidade</p>
-            <p><mat-icon class="icon" style="color: rgb(10, 218, 10); margin-right: 10px;">check</mat-icon>Segurança</p>
+            <p><mat-icon class="icon">check</mat-icon>Facilidade</p>
+            <p><mat-icon class="icon">check</mat-icon>Praticidade</p>
+            <p><mat-icon class="icon">check</mat-icon>Segurança</p>
         
         </div>
         <button class="button" mat-raised-button color="primary">Confira os locais</button>
@@ -21,7 +21,7 @@
     <h1 class="blue-text font-up bold-up" >Veja os Municípios:</h1>
     <ngx-slick-carousel class="carousel" [config]="slickConfig">
       <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <mat-card class="custom-card">
+        <mat-card>
           <div class="img-container">
             <img [src]="slide.imageUrl" alt="Imagem do Slide" class="img">
           </div>
@@ -38,6 +38,12 @@
         </mat-card>
       </div>
     </ngx-slick-carousel>
+  </div>
+
+  <div class="bilhetes">
+    <h1>Tenha a solução completa para recarregar o seu bilhete único diretamente de casa</h1>
+    <p><mat-icon class="icon">check</mat-icon>Totalmente seguro</p>
+    <p><mat-icon class="icon">check</mat-icon>Cobertura a todos os Municípios do Estado de São Paulo</p>
   </div>
   
 </div>

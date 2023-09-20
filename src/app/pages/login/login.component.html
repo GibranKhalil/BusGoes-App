@@ -9,20 +9,20 @@
             <p>Usuário: </p>
             <mat-form-field >
                     <mat-label>Digite seu usuário:</mat-label>
-                    <input required matInput type="text" [ngModel]="user">
+                    <input required matInput type="text" [(ngModel)]="user" name="user">
             </mat-form-field>
             </div>
             <div class="inic-colum margin-bottom">
                 <p>Senha: </p>
                 <mat-form-field>
                         <mat-label>Digite sua senha:</mat-label>
-                        <input required matInput type="password" [ngModel]="senha">
+                        <input required matInput type="password" [(ngModel)]="senha" name="senha">
                 </mat-form-field>
             </div>
 
-            <a id="cadastro" routerLink="cadastro" class="margin-bottom">Não possui uma conta? Clique aqui para se cadastrar!</a>
+            <a id="cadastro" routerLink="/cadastro" class="margin-bottom">Não possui uma conta? Clique aqui para se cadastrar!</a>
 
-            <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
+            <button (click)="btnlogin()" mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
         </div>
     </mat-card-content>
 </mat-card>

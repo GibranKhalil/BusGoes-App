@@ -8,6 +8,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MenuComponent } from './content/menu/menu.component';
 import { RodapeComponent } from './content/rodape/rodape.component';
+import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -18,6 +19,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { Autenticador } from './shared/autenticador.service';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     SlickCarouselModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
