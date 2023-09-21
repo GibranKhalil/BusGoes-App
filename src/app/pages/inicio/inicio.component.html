@@ -4,12 +4,12 @@
       <h1 class="blue-text title">A Melhor plataforma para comprar passagens intermunicipais e recarregar os seus
         bilhetes</h1>
       <h2 class="blue-text sub-title">Conectando Destinos, Criando Memórias.</h2>
-      <div class="checks">
-        <p><mat-icon class="icon">check</mat-icon>Facilidade</p>
-        <p><mat-icon class="icon">check</mat-icon>Praticidade</p>
-        <p><mat-icon class="icon">check</mat-icon>Segurança</p>
-
+      <div class="checks blue-text">
+        <p><mat-icon class="icon  green-color">check</mat-icon>Facilidade</p>
+        <p><mat-icon class="icon green-color">check</mat-icon>Praticidade</p>
+        <p><mat-icon class="icon green-color">check</mat-icon>Segurança</p>
       </div>
+      
       <button (click)="rolar('rolar')" class="button" mat-raised-button color="primary">Confira os locais</button>
 
     </div>
@@ -21,18 +21,18 @@
   <div class="cards">
     <h1  id="rolar" class="blue-text font-up bold-up">Veja os Municípios:</h1>
     <ngx-slick-carousel  class="carousel" [config]="slickConfig">
-      <div  ngxSlickItem *ngFor="let slide of slides" class="slide">
+      <div  ngxSlickItem *ngFor="let slide of slides">
         <mat-card  class="card-viagens">
           <div class="img-container">
             <img [src]="slide.imageUrl" alt="Imagem do Slide" class="img">
           </div>
           <mat-card-content  class="viagens">
-            <div class="destino">
+            <div>
               <h1 class="font-down margin-top margin-bottom">{{slide.saida}}</h1>
               <mat-icon >swap_vert</mat-icon>
               <p class="font-down margin-top" style="color: #1C2833 ;">{{slide.destino}}</p>
             </div>
-            <div class="preco">
+            <div>
               <p>A partir de</p>
               <h1 class="font-preco bold-up">R$ {{slide.preco}}<sup style="margin-left: 10px;">{{slide.cents}}</sup>
               </h1>
@@ -44,7 +44,6 @@
   </div>
 
   
-
   <div class="elementside">
     <div class="texto">
       <h1>Tenha a solução completa para recarregar o seu bilhete único diretamente de casa</h1>
@@ -56,23 +55,4 @@
       <img src="assets/bilhete.jpg">
     </div>
   </div>
-
-  <div class="sobre-devs">
-    <div class="txt-center">
-      <h1>Conheça um pouco sobre os desenvolvedores:</h1>
-    </div>
-    <div class="devs" >
-      <div class="dev" *ngFor="let desenvolvedor of devs">
-        <mat-card class="card-dev">
-          <mat-card-header>
-            <img class="border" style="width: 200px; height: 200px;" [src]="desenvolvedor.img" mat-card-avatar>
-          </mat-card-header>
-          <mat-card-content class="">
-            <mat-card-title>{{desenvolvedor.nome}}</mat-card-title>
-            <mat-card-subtitle>{{desenvolvedor.funcao}}</mat-card-subtitle>
-            <p>{{desenvolvedor.tarefas}} </p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </div>
   </div>

@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { Autenticador } from './shared/autenticador.service';
+import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { Autenticador } from './shared/autenticador.service';
     InicioComponent,
     MenuComponent,
     RodapeComponent,
+    SobreDevsComponent,
   ],
   imports: [
     BrowserModule,

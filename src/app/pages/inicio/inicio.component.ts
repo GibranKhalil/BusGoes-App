@@ -18,15 +18,16 @@ rolar(id: string){
 }
 
   slickConfig = {
+    autoplay:true,
+    autoplaySpeed: 1000,
+    speed: 650,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    draggable:false,
     arrows: true,
-    dots: true,
-    
+
   };
-
-
 
   slides = [
     { 
@@ -59,24 +60,5 @@ rolar(id: string){
     }
   ];
 
-  devs = [
-    {
-      img: '',
-      nome:'Gibran Khalil',
-      funcao: '-----',
-      tarefas: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor, diam ut condimentum euismod, nulla urna vulputate ipsum, non malesuada sem neque ac neque. Sed ut congue turpis. Aenean posuere congue metus eu iaculis. Curabitur posuere consectetur lectus ac dapibus. Nulla eget ante augue. Aenean egestas tristique lacinia. Duis dictum sed mi vitae accumsan.'
-    },
-    {
-      img: '',
-      nome:'Sabrina Araújo',
-      funcao: '-----',
-      tarefas: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor, diam ut condimentum euismod, nulla urna vulputate ipsum, non malesuada sem neque ac neque. Sed ut congue turpis. Aenean posuere congue metus eu iaculis. Curabitur posuere consectetur lectus ac dapibus. Nulla eget ante augue. Aenean egestas tristique lacinia. Duis dictum sed mi vitae accumsan.'
-    },
-    {
-      img: '',
-      nome:'Júlia Cardoso',
-      funcao: '-----',
-      tarefas: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor, diam ut condimentum euismod, nulla urna vulputate ipsum, non malesuada sem neque ac neque. Sed ut congue turpis. Aenean posuere congue metus eu iaculis. Curabitur posuere consectetur lectus ac dapibus. Nulla eget ante augue. Aenean egestas tristique lacinia. Duis dictum sed mi vitae accumsan.'
-    }
-  ]
+  
 }

@@ -1,10 +1,11 @@
-<app-menu [Drawer]= "drawer"></app-menu>
 <mat-drawer-container class="example-container" autosize>
+    <app-menu [Drawer]= "drawer"></app-menu>
     <mat-drawer #drawer class="example-sidenav" mode="side">
         <mat-list>
             <mat-list-item  routerLink="inicio" (click)="drawer.toggle()"><mat-icon>home</mat-icon><span>Inicio</span></mat-list-item>
-            <mat-list-item  routerLink="login" (click)="drawer.toggle()"><mat-icon>login</mat-icon>Login</mat-list-item>
-            <mat-list-item  routerLink="cadastro" (click)="drawer.toggle()"><mat-icon>person</mat-icon>Cadastro</mat-list-item>
+            <mat-list-item  routerLink="login" (click)="drawer.toggle()" *ngIf="!logado"><mat-icon>login</mat-icon>Login</mat-list-item>
+            <mat-list-item  routerLink="cadastro" (click)="drawer.toggle()" *ngIf="!logado"><mat-icon>person</mat-icon>Cadastro</mat-list-item>
+            <mat-list-item  routerLink="sobre" (click)="drawer.toggle()"><mat-icon>info</mat-icon>Desenvolvedores</mat-list-item>
         </mat-list>
     </mat-drawer>
   
@@ -13,7 +14,9 @@
     <div class="example-sidenav-content">
         <router-outlet></router-outlet>
     </div>
+ 
   </mat-drawer-container>
+
   <app-rodape></app-rodape>
   
 

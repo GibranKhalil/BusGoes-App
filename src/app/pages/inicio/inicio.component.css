@@ -1,227 +1,145 @@
-.content{
+.content{ /*Essa classe se refere ao fundo da página inicio, isto é, uma div onde estão todos os elementos dentro*/
     width: 100%;
     height: 100%;
     display: flex;
     justify-self: center;
     flex-direction: column;
+} 
+
+.elementside{ /*Essa classe foi usada para colocar dois elementos lado a lado*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: flex-start;
 }
 
-.slick-prev:before, .slick-next:before{
-  color: #000;
-
+.texto { /*Essa classe foi usada para separar os textos da imagem*/
+  margin-top: 120px;
+  width: 30%;
+  text-align:left;
+  justify-content: center;
 }
+
+.blue-text{ /*Usada para colocar cor aos textos*/
+  color:#5499C7 ;
+}
+
+.title{ /*Usada para aplicar estilo de titulo para um elemento*/
+  font-size: 30px;
+  font-weight: 425;
+}
+
+
+.checks{ /*Usada para colocar os beneficios em formato de coluna e alterar sua fonte*/
+  font-size: 17px;
+   display: flex;
+   flex-direction: column;
+}
+
+.green-color{ /*Usada para colocar os textos na cor verde*/
+  color: #58D68D
+}
+
+.icon{ /*Usada para alterar os icones 'checks'*/
+  width: 20px;
+  margin-right: 10px;
+  height: 20px;
+}
+
+.button{ /*Usada para distanciar o botao dos textos e fazer com que ele preencha horizontalmente toda a div que está inserido*/
+  margin-top: 10px;
+   width: 100% ;
+}
+
+
+.img-inicio{ /*Alterar tamanho da div que comporta a img */
+  width: 50%;
+}
+
+.img-inicio img{ /*Alterar tamanho da img que esta dentro da div */
+  width: 100%;
+}
+
+.cards{ /*Organiza os cards que estão no carrosel e define o tamanho da div*/
+  text-align: center;
+  height: 100%;
+  max-height: 600px;
+}
+
+.font-up{ /*Aumenta o tamanho da font*/
+  font-size: 25px;
+}
+
+.bold-up{ /*coloca a font em negrito*/
+  font-weight: 450;
+}
+
+.carousel { /*Organiza os mat-cards que estao dentro do carrossel que foi criando usando a biblioteca ngx-slick-carrosel*/
+  display: flex;
+  width: 1200px;
+  height: 450px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+
+
+.card-viagens{ /*Define as propriedades de cada card que está dentro do carrosel. Também separa um card do outro*/
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  overflow: hidden; /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+.img-container { /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
+  width: 100%;
+  overflow: hidden;
+}
+
+.viagens{ /*Ajusta o conteudo dos cards*/
+  width: 100%;
+  margin-left: 60px ;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.margin-bottom{
+  margin-bottom: 10px;
+}
+
+.margin-top{
+  margin-top: 10px;
+}
+
+
+.font-down{
+  font-size: 16px;
+}
+
   
-  .img-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-
-.carousel {
-    display: flex;
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    justify-content: space-between;
-    
-  }
-
-  .slide {
-    width: 100%;
-    height: 600px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-
-  .card-viagens{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 400px;
-    margin-right: 50px;
-    margin-left: 50px;
-  }
-
-
-  .viagens{
-    width: 100%;
-    margin-left: 60px ;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-
   .img{
     width: 100%;
     height: 200px;
  
   }
   
-
-  .slick-arrow {
-    background-color: black;
-    color: white;
-    border-radius: 50%; 
-    font-size: 20px; 
-    width: 30px; 
-    height: 30px;
-    line-height: 30px;
-    
-  }
-  
-  .elementside{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    align-items: flex-start;
-  }
-
-  .img-inicio{
-    width: 50%;
-  }
-
-  .img-inicio img{
-    width: 100%;
-  }
-
-  .blue-text{
-    color:#5499C7 ;
-  }
-
-  .checks{
-    font-size: 17px;
-   display: flex;
-   flex-direction: column;
-   color: #5499C7;
-}
-
-.button{
-    margin-top: 10px;
-     width: 100% ;
-}
-
-.icon{
-    width: 20px;
-    color: #58D68D ; 
-    margin-right: 10px;
-    height: 20px;
-}
-
-  .texto{
-    margin-top: 120px;
-    width: 30%;
-    text-align:left;
-    justify-content: center;
-  }
-
-  .title{
-    font-size: 30px;
-    font-weight: 425;
-  }
-
-  .cards{
-    text-align: center;
-    height: 100%;
-    max-height: 600px;
-  }
-
   .txt-center{
     text-align: center;
   }
 
-  .font-up{
-    font-size: 25px;
-  }
 
-  .bold-up{
-    font-weight: 450;
-  }
-
-  .font-down{
-    font-size: 16px;
-  }
-
-  .margin-top{
-    margin-top: 10px;
-  }
-
-  .font-preco{
+  .font-preco{ /*Usada para modificar o texto que mostra o preço definitivo*/
     font-size: 45px;
     color: #000;
     font-weight: 550;
   }
-
-  .margin-bottom{
-    margin-bottom: 10px;
-  }
-
-  .gray{
-    color:#ABB2B9 ;
-  }
-
-  .circle{
-  width: 140px;
-  height: 140px;
-  -moz-border-radius: 70px; 
-  -webkit-border-radius: 70px; 
-  border-radius: 70px;
-  }
-
-  .bilhetes{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-  }
-  
-  .devs{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items:center;
-    justify-content: space-evenly;
-
-  }
-
-  
-.card-dev{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 10px;
-  width: 300px;
-  height: auto;
-}
-
-.border{
-  border: 2px solid #000000;
-}
-
-.sobre-devs{
-  margin-bottom: 100px;
-}
-
-.custom-dots {
-  margin-top: 10px;
-}
-
-.custom-dots button {
-  background-color: #ccc; /* Cor de fundo dos dots */
-  width: 10px; /* Largura dos dots */
-  height: 10px; /* Altura dos dots */
-  margin: 0 5px; /* Margem entre os dots */
-  border: none; /* Remova as bordas se desejar */
-  border-radius: 50%; /* Para dots redondos */
-  cursor: pointer; /* Altere o cursor para indicar clicabilidade */
-}
 
