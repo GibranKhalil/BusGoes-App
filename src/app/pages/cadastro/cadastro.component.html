@@ -4,37 +4,39 @@
             Crie sua conta:
         </mat-card-title>
         <mat-card-content>
-            <div class="form">
-                <div class="inic-colum">
-                    <p>Nome: </p>
-                    <mat-form-field >
+            <form action="cadastro.php" method="post">
+                <div class="form">
+                    <div class="inic-colum">
+                        <p>Nome: </p>
+                        <mat-form-field>
                             <mat-label>Digite seu nome:</mat-label>
-                            <input required matInput type="text">
-                    </mat-form-field>
+                            <input required matInput type="text" name="nome">
+                        </mat-form-field>
                     </div>
-                <div class="inic-colum">
-                <p >Usuário: </p>
-                <mat-form-field >
-                        <mat-label>Digite seu usuário:</mat-label>
-                        <input required matInput type="text">
-                </mat-form-field>
-                </div>
-                <div class="inic-colum">
+                    <div class="inic-colum">
+                        <p>Usuário: </p>
+                        <mat-form-field>
+                            <mat-label>Digite seu usuário:</mat-label>
+                            <input required matInput type="text" name="email">
+                        </mat-form-field>
+                    </div>
+                    <!--                <div class="inic-colum">
                     <p>Telefone: </p>
                     <mat-form-field >
                             <mat-label>Digite seu número:</mat-label>
-                            <input required matInput type="tel">
+                            <input required matInput type="tel" name="telefone">
                     </mat-form-field>
-                    </div>
-                <div class="inic-colum">
-                    <p>Senha: </p>
-                    <mat-form-field>
+                    </div>-->
+                    <div class="inic-colum">
+                        <p>Senha: </p>
+                        <mat-form-field>
                             <mat-label>Digite sua senha:</mat-label>
-                            <input required matInput type="password">
-                    </mat-form-field>
+                            <input required matInput type="password" name="senha">
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
                 </div>
-                <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
-            </div>
+            </form>
         </mat-card-content>
     </mat-card>
-    </div>
+</div>

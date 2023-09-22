@@ -8,33 +8,37 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent{
 
   constructor(private router: Router, private shared:SharedService, private http: HttpClient) {}
- 
-
-  data:any
-  ngOnInit(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/posts/1').subscribe((data)=>{
-      this.data = data;
-      console.log(data); //chamada htpp para posteriormente ser usado o php
-    })
-  }
-  
+   
   user:string = '';
   senha:string = '';
 
-
-
-  btnlogin():void{
-    if(this.user == "admin" && this.senha == "admin"){
-      alert("Bem-vindo");
+  login(){
+    const userdata = {user:this.user, senha:this.senha}
+    this.http.post('http://localhost/phpmyadmin/index.php?route=/database/structure&db=conecta', userdata).subscribe((response:any)=>{
+    if(response.sucess){
       this.shared.setusuario(this.user);
       this.router.navigate(['inicio']);
     }
     else{
       alert("Dados Incorretos");
     }
+    })
   }
+
+
+
+/* btnlogin():void{
+    if(this.user == "admin" && this.senha == "admin"){
+      alert("Bem-vindo");
+
+    }
+    else{
+      
+    }
+  }
+  */
 
 }
