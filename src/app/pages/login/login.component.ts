@@ -10,17 +10,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent{
 
-  constructor(private router: Router, private shared:SharedService, private http: HttpClient) {}
-   
-  user:string = '';
+  email:string = '';
   senha:string = '';
 
+  constructor(private router: Router, private shared:SharedService, private http: HttpClient) {}
+   
+
+
   login(){
-    const userdata = {user:this.user, senha:this.senha}
-    this.http.post('http://localhost/phpmyadmin/index.php?route=/database/structure&db=conecta', userdata).subscribe((response:any)=>{
+    this.shared.login(this.email, this.senha).subscribe((response:any)=>{
     if(response.sucess){
-      this.shared.setusuario(this.user);
+      this.shared.setusuario(this.email);
       this.router.navigate(['inicio']);
+      alert("Entrando");
     }
     else{
       alert("Dados Incorretos");

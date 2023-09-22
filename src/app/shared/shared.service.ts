@@ -8,7 +8,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class SharedService {
 
   private usuario: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  private apiUrl = 'http://localhost/phpmyadmin/index.php?route=/database/structure&db=conecta';
   constructor(private http: HttpClient) { }
 
    //vericar se o usuario esta logado, será usado depois que o php for implementado

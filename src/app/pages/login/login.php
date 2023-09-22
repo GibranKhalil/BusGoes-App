@@ -1,35 +1,29 @@
 <?php
-/*<?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
-// Obtenha os dados enviados via POST
-$data = json_decode(file_get_contents("php://input"));
-
-$username = $data->$usuario['username'];
-$password = $data->$usuario['senha'];
-
-// Verifique as credenciais no banco de dados (substitua com seu próprio código de verificação)
-if ($username === 'usuario' && $password === 'senha') {
-  $response = array('success' => true);
-} else {
-  $response = array('success' => false);
-}
-
-echo json_encode($response);
-?> */
-header('Content-Type: application/json');
     include('conexao.php');
     if(isset($_POST['email']) || isset($_POST['senha'])){
         if(strlen($_POST['email'] == 0)){
-            echo "Preencha seu email";
+            echo json_encode(["error" => "Preencha seu email"]);
         }else if(strlen($_POST['senha'] == 0)){
-            echo "Preencha sua senha";
+            echo json_encode(["error" => "Preencha sua senha"]);
         }else{
             $email = $mysqli->real_escape_string($_POST['email']);
             $senha = $mysqli->real_escape_string($_POST['senha']);
 
             $sql_code = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
-            $sql_query = $mysqli->query($sql_code) or die("Falha na execução" . $mysqli->error);
+            try {
+                $sql_query = $mysqli->query($sql_code);
+                if (!$sql_query) {
+                    throw new Exception("Falha na execução: " . $mysqli->error);
+                }
+            } catch (Exception $e) {
+                echo json_encode(["error" => $e->getMessage()]);
+                exit;
+            }
             
             $usuario  = $sql_query->fetch_assoc();
 
@@ -52,7 +46,7 @@ header('Content-Type: application/json');
                 
             }
             else{
-                echo "Falha ao logar! E-mail ou senha incorretos";
+                echo json_encode(["error" => "Falha ao logar! Preencha seus dados novamente"]);
                 $response = array('success' => false);
             }
         }
