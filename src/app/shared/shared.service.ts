@@ -12,9 +12,13 @@ export class SharedService {
 
    //vericar se o usuario esta logado, será usado depois que o php for implementado
 
-   getTarefas(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}?action=get`);
-  }
+login(email:string, senha:string){
+  const userdata = new FormData();
+  userdata.append('email', email);
+  userdata.append('senha', senha);
+
+  return this.http.post('https://jsonplaceholder.typicode.com/users', userdata);
+}
 
   usuariologado():boolean{
     let user = this.usuario.getValue();
@@ -26,7 +30,7 @@ export class SharedService {
     }
   }
 
-  
+
 
   setusuario(usuario:string){
     this.usuario.next(usuario);
