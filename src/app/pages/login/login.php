@@ -1,20 +1,17 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
 
     include('conexao.php');
-    if(isset($_POST['email']) || isset($_POST['senha'])){
-        if(strlen($_POST['email'] == 0)){
+    if(isset($_POST['Email']) || isset($_POST['Senha'])){
+        if(strlen($_POST['Email'] == 0)){
             echo json_encode(["error" => "Preencha seu email"]);
-        }else if(strlen($_POST['senha'] == 0)){
+        }else if(strlen($_POST['Senha'] == 0)){
             echo json_encode(["error" => "Preencha sua senha"]);
         }else{
-            $email = $mysqli->real_escape_string($_POST['email']);
-            $senha = $mysqli->real_escape_string($_POST['senha']);
+            $email = $mysqli->real_escape_string($_POST['Email']);
+            $senha = $mysqli->real_escape_string($_POST['Senha']);
 
-            $sql_code = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
+            $sql_code = "SELECT * FROM usuarios WHERE Email = '$email' LIMIT 1";
             try {
                 $sql_query = $mysqli->query($sql_code);
                 if (!$sql_query) {
@@ -32,14 +29,14 @@ header("Access-Control-Allow-Headers: Content-Type");
 
             $quantidade = $sql_query->num_rows;
         
-            if(password_verify($senha, $usuario['senha'])){
+            if(password_verify($senha, $usuario['Senha'])){
                 if($quantidade == 1){
                     if(!isset($_SESSION) ){
                         session_start();
                         $response = array('success' => true);
                     }
-                    $_SESSION['id'] = $usuario['id'];
-                    $_SESSION['nome'] = $usuario['nome'];
+                    $_SESSION['Id'] = $usuario['Id'];
+                    $_SESSION['Nome'] = $usuario['Nome'];
                     //header("Location: ./inicio/inicio.component.html");
 
                 }
