@@ -17,7 +17,6 @@ login(email:string, senha:string){
   userdata.append('Senha', senha);
 
   return this.http.post('http://localhost/phpmyadmin/index.php?route=/sql&db=conecta&table=usuarios&pos=0', userdata);
-}
 
   usuariologado():boolean{
     let user = this.usuario.getValue();
