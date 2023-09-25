@@ -4,39 +4,30 @@
             Crie sua conta:
         </mat-card-title>
         <mat-card-content>
-            <form action="cadastro.php" method="post">
-                <div class="form">
+                <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" class="form">
                     <div class="inic-colum">
                         <p>Nome: </p>
                         <mat-form-field>
                             <mat-label>Digite seu nome:</mat-label>
-                            <input required matInput type="text" name="nome">
+                            <input required matInput type="text" name="nome" formControlName="name">
                         </mat-form-field>
                     </div>
                     <div class="inic-colum">
-                        <p>Usuário: </p>
+                        <p>Email: </p>
                         <mat-form-field>
-                            <mat-label>Digite seu usuário:</mat-label>
-                            <input required matInput type="text" name="email">
+                            <mat-label>Digite seu email:</mat-label>
+                            <input required matInput type="email" name="email" formControlName="email">
                         </mat-form-field>
                     </div>
-                    <!--                <div class="inic-colum">
-                    <p>Telefone: </p>
-                    <mat-form-field >
-                            <mat-label>Digite seu número:</mat-label>
-                            <input required matInput type="tel" name="telefone">
-                    </mat-form-field>
-                    </div>-->
                     <div class="inic-colum">
                         <p>Senha: </p>
                         <mat-form-field>
                             <mat-label>Digite sua senha:</mat-label>
-                            <input required matInput type="password" name="senha">
+                            <input required matInput type="password" name="senha" formControlName="password">
                         </mat-form-field>
                     </div>
                     <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
-                </div>
-            </form>
+                </form>
         </mat-card-content>
     </mat-card>
 </div>

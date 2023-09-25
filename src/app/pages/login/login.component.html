@@ -4,19 +4,19 @@
             Acesse sua conta:
         </mat-card-title>
         <mat-card-content>
-            <form (ngSubmit)="login()" class="form">
+            <form  [formGroup]="angForm" (ngSubmit)="postdata(angForm)" class="form">
                 <div class="inic-colum margin-bottom">
                     <p>Usuário: </p>
                     <mat-form-field>
                         <mat-label>Digite seu e-mail:</mat-label>
-                        <input required matInput type="text" id="email" [(ngModel)]="email" name="Email">
+                        <input required matInput type="text" id="email" [(ngModel)]="user" name="Email" formControlName="email">
                     </mat-form-field>
                 </div>
                 <div class="inic-colum margin-bottom">
                     <p>Senha: </p>
                     <mat-form-field>
                         <mat-label>Digite sua senha:</mat-label>
-                        <input required matInput type="text" id="senha" [(ngModel)]="senha" name="Senha">
+                        <input required matInput type="text" id="senha" [(ngModel)]="senha" name="Senha" formControlName="password">
                     </mat-form-field>
                 </div>
 

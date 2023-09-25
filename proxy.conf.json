@@ -1,8 +1,7 @@
 {
-    "/phpmyadmin": {
-      "target": "http://192.168.1.85",
-      "secure": false,
-      "changeOrigin": true
-    }
+  "/phpmyadmin": {
+    "target": "http://localhost:4200",
+    "secure": false,
+    "changeOrigin": true
   }
-  
+}

@@ -14,12 +14,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ApiService } from './shared/autenticador.service';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { Autenticador } from './shared/autenticador.service';
 import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 
 
@@ -43,13 +43,14 @@ import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
     MatCardModule,
     MatFormFieldModule,
     MatListModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatSidenavModule,
     FormsModule,
     MatInputModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

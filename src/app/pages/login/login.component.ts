@@ -1,46 +1,43 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ApiService} from 'src/app/shared/autenticador.service';
 import { SharedService } from 'src/app/shared/shared.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent implements OnInit {
+  
+  senha:string ='';
+  user:string = '';
 
-  email:string = '';
-  senha:string = '';
-
-  constructor(private router: Router, private shared:SharedService, private http: HttpClient) {}
-   
-
-
-  login(){
-    this.shared.login(this.email, this.senha).subscribe((response:any)=>{
-    if(response.sucess){
-      this.shared.setusuario(this.email);
-      this.router.navigate(['inicio']);
-      alert("Entrando");
-    }
-    else{
-      alert("Dados Incorretos");
-    }
-    })
+  angForm: FormGroup;
+  constructor(private fb: FormBuilder, private dataService: ApiService, private router: Router, private shared:SharedService) {
+    this.angForm = this.fb.group({
+      email: ['', [Validators.required, Validators.minLength(1), Validators.email]],
+      password: ['', Validators.required]
+    });
   }
 
-
-
-/* btnlogin():void{
-    if(this.user == "admin" && this.senha == "admin"){
-      alert("Bem-vindo");
-
-    }
-    else{
-      
-    }
+  ngOnInit() {
   }
-  */
-
+  postdata(angForm1:FormGroup) {
+    this.dataService.userlogin(angForm1.value.email, angForm1.value.password)
+      .pipe(first())
+      .subscribe(
+        data => {
+          const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/inicio';
+          this.shared.setusuario(this.angForm.value.email);
+          this.router.navigate([redirect]);
+        },
+        error => {
+          alert("A senha ou o Email está errado");
+        });
+  }
+  get email() { return this.angForm.get('email'); }
+  get password() { return this.angForm.get('password'); }
 }
