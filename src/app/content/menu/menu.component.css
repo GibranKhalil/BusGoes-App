@@ -14,5 +14,15 @@
 
   .menu{
     width: 100%;
-    z-index: 9999;
+  }
+
+  .hud{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hud mat-icon{
+    margin-right: 5px;
   }

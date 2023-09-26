@@ -30,9 +30,12 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
+          if(data.length > 0){
+          const nome = data[0].name;
           const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/inicio';
-          this.shared.setusuario(this.angForm.value.email);
+          this.shared.setusuario(nome);
           this.router.navigate([redirect]);
+          }
         },
         error => {
           alert("A senha ou o Email está errado");

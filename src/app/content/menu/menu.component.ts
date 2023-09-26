@@ -20,13 +20,10 @@ export class MenuComponent {
     else{
       this.deslogado = false;
     }
-    }) //vê se o usuario está logado
+    })
   }
 
   @Input() Drawer:any;
-  
-
-
 
   showmenu(){
     this.Drawer.toggle();

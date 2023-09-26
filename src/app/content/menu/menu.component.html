@@ -10,7 +10,7 @@
     <span>
       <button class="botao" routerLink="/login" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>login</mat-icon>Entrar</button>
       <button class="botao" routerLink="/cadastro" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>person</mat-icon>Cadastrar</button>
-        {{nome}}
+        <p class="hud" *ngIf="!deslogado"><mat-icon>account_circle</mat-icon>{{nome}}</p>
     </span>
   </mat-toolbar>
 </div>
