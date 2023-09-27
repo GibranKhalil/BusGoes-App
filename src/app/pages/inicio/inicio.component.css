@@ -1,12 +1,14 @@
-.content{ /*Essa classe se refere ao fundo da página inicio, isto é, uma div onde estão todos os elementos dentro*/
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-self: center;
-    flex-direction: column;
-} 
+.content {
+  /*Essa classe se refere ao fundo da página inicio, isto é, uma div onde estão todos os elementos dentro*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+}
 
-.elementside{ /*Essa classe foi usada para colocar dois elementos lado a lado*/
+.elementside {
+  /*Essa classe foi usada para colocar dois elementos lado a lado*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -14,68 +16,81 @@
   align-items: flex-start;
 }
 
-.texto { /*Essa classe foi usada para separar os textos da imagem*/
+.texto {
+  /*Essa classe foi usada para separar os textos da imagem*/
   margin-top: 120px;
   width: 30%;
-  text-align:left;
+  text-align: left;
   justify-content: center;
 }
 
-.blue-text{ /*Usada para colocar cor aos textos*/
-  color:#5499C7 ;
+.blue-text {
+  /*Usada para colocar cor aos textos*/
+  color: #5499C7;
 }
 
-.title{ /*Usada para aplicar estilo de titulo para um elemento*/
+.title {
+  /*Usada para aplicar estilo de titulo para um elemento*/
   font-size: 30px;
   font-weight: 425;
 }
 
 
-.checks{ /*Usada para colocar os beneficios em formato de coluna e alterar sua fonte*/
+.checks {
+  /*Usada para colocar os beneficios em formato de coluna e alterar sua fonte*/
   font-size: 17px;
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.green-color{ /*Usada para colocar os textos na cor verde*/
+.green-color {
+  /*Usada para colocar os textos na cor verde*/
   color: #58D68D
 }
 
-.icon{ /*Usada para alterar os icones 'checks'*/
+.icon {
+  /*Usada para alterar os icones 'checks'*/
   width: 20px;
   margin-right: 10px;
   height: 20px;
 }
 
-.button{ /*Usada para distanciar o botao dos textos e fazer com que ele preencha horizontalmente toda a div que está inserido*/
+.button {
+  /*Usada para distanciar o botao dos textos e fazer com que ele preencha horizontalmente toda a div que está inserido*/
   margin-top: 10px;
-   width: 100% ;
-}
-
-
-.img-inicio{ /*Alterar tamanho da div que comporta a img */
-  width: 50%;
-}
-
-.img-inicio img{ /*Alterar tamanho da img que esta dentro da div */
   width: 100%;
 }
 
-.cards{ /*Organiza os cards que estão no carrosel e define o tamanho da div*/
+
+.img-inicio {
+  /*Alterar tamanho da div que comporta a img */
+  width: 50%;
+}
+
+.img-inicio img {
+  /*Alterar tamanho da img que esta dentro da div */
+  width: 100%;
+}
+
+.cards {
+  /*Organiza os cards que estão no carrosel e define o tamanho da div*/
   text-align: center;
   height: 100%;
   max-height: 600px;
 }
 
-.font-up{ /*Aumenta o tamanho da font*/
+.font-up {
+  /*Aumenta o tamanho da font*/
   font-size: 25px;
 }
 
-.bold-up{ /*coloca a font em negrito*/
+.bold-up {
+  /*coloca a font em negrito*/
   font-weight: 450;
 }
 
-.carousel { /*Organiza os mat-cards que estao dentro do carrossel que foi criando usando a biblioteca ngx-slick-carrosel*/
+.carousel {
+  /*Organiza os mat-cards que estao dentro do carrossel que foi criando usando a biblioteca ngx-slick-carrosel*/
   display: flex;
   width: 1200px;
   height: 450px;
@@ -85,11 +100,13 @@
 
 
 
-.card-viagens{ /*Define as propriedades de cada card que está dentro do carrosel. Também separa um card do outro*/
+.card-viagens {
+  /*Define as propriedades de cada card que está dentro do carrosel. Também separa um card do outro*/
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   display: flex;
-  overflow: hidden; /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
+  overflow: hidden;
+  /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -99,127 +116,140 @@
 }
 
 
-.img-container { /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
+.img-container {
+  /*Faz com que as imagens  do card respeitem os limetes do card e ajusta a largura para que ela preencha o card horizontalmente*/
   width: 100%;
   overflow: hidden;
 }
 
-.viagens{ /*Ajusta o conteudo dos cards*/
+.viagens {
+  /*Ajusta o conteudo dos cards*/
   width: 100%;
-  margin-left: 60px ;
+  margin-left: 60px;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.margin-bottom{
+.margin-bottom {
   margin-bottom: 10px;
 }
 
-.margin-top{
+.margin-top {
   margin-top: 10px;
 }
 
 
-.font-down{
+.font-down {
   font-size: 16px;
 }
 
-  
-  .img{
-    width: 100%;
-    height: 200px;
- 
-  }
-  
-  .txt-center{
-    text-align: center;
-  }
+
+.img {
+  width: 100%;
+  height: 200px;
+
+}
+
+.txt-center {
+  text-align: center;
+}
 
 
-  .font-preco{ /*Usada para modificar o texto que mostra o preço definitivo*/
-    font-size: 45px;
-    color: #000;
-    font-weight: 550;
-  }
+.font-preco {
+  /*Usada para modificar o texto que mostra o preço definitivo*/
+  font-size: 45px;
+  color: #000;
+  font-weight: 550;
+}
 
-  .sobre-page{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.sobre-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .sobre-inicio{
-    background: rgba(0, 0, 0, 0.23) url("src\assets\passageiro.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-    width: 100%;
-    height: 600px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.sobre-inicio {
+  background: rgba(0, 0, 0, 0.3) url("src\assets\passageiro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  width: 100%;
+  height: 600px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .texto-sobre{
-    width: 100%;
-    height: auto;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    bottom: 0%;
-    top: 30%;
-  }
+.texto-sobre {
+  width: 90%;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  bottom: 0%;
+  top: 30%;
+}
 
 
-  #titulo-sobre{
-    text-align: center;
-    line-height: 60px;
-    font-size: 60px;
-    font-weight: 600;
-  }
+#titulo-sobre {
+  text-align: center;
+  line-height: 60px;
+  font-size: 40px;
+  font-weight: 600;
+}
 
-  #sub-titulo-sobre{
-    text-align: center;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 50px;
-  }
+#sub-titulo-sobre {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+}
 
-  .sobre{
-    width: 80%;
-    margin-top: 150px;
-    background-color: #58D68D;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+.sobre {
+  width: 100%;
+  background-color: #58D68D;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .sobre-txt{
-    width: 30%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .sobre-title{
-    font-weight: 600;
-    font-size: 30px;
-  }
+.sobre-txt {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 12%;
+}
 
-  .sobre-sub{
-    font-size: 18px;
-  }
+.sobre-txt-inverse {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 10%;
+}
 
-  .sobre-img{
-    margin-left: 100px;
-    width: 45%;
-  }
+.sobre-title {
+  font-weight: 600;
+  font-size: 30px;
+}
 
-  .img-sobre{
-    width: 100%;
-  }
+.sobre-sub {
+  font-size: 18px;
+}
+
+.sobre-img {
+  width: 50%;
+}
+
+.img-sobre {
+  width: 100%;
+}

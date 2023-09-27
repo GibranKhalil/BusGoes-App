@@ -1,3 +1,34 @@
 <div class="content">
-    <p>Projeto Bus</p>
+    <div class="first">
+        <div class="txt-resumo">
+            <p>Nossa missão é simplificar a recarga de bilhetes e a compra de passagens de transporte público em todo o estado de São Paulo. Investimos constantemente em tecnologia de ponta para garantir que o processo seja rápido e seguro. Além disso, nossa equipe de suporte profissional está disponível para atender às necessidades dos clientes, esclarecer dúvidas e resolver problemas. Nosso objetivo é tornar a experiência dos nossos clientes em todo o estado de São Paulo a mais conveniente possível, contribuindo para uma mobilidade urbana mais eficiente em nossa região.</p>
+        </div>
+        <div class="pay" *ngFor="let cards of pays">
+            <img class="icons" [src]="cards.img">
+        </div>
+    </div>
+    <div class="">
+        <h1 id="title-rodape">Passagens</h1>
+        <ul *ngFor="let cidade of cidades">
+            <li class="list-rodape">
+                <a>{{cidade.nome}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="">
+        <h1 class="title-rodape">Recarga</h1>
+        <ul *ngFor="let bilhete of bilhetes">
+            <li class="list-rodape">
+                <a>{{bilhete.nome}}</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title-rodape">Ajuda</h1>
+        <ul *ngFor="let help of ajuda">
+            <li class="list-rodape">
+                <a>{{help.nome}}</a>
+            </li>
+        </ul>
+    </div>
 </div>
