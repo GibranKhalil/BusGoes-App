@@ -1,27 +1,23 @@
+<h1 class="txt-center">Conheça um pouco sobre os desenvolvedores:</h1>
 <div class="content">
-    <div class="txt-center">
-        <h1>Conheça um pouco sobre os desenvolvedores:</h1>
-    </div>
-    <div class="devs">
-        <div class="dev" *ngFor="let desenvolvedor of devs">
-            <mat-card class="card-dev">
-                <mat-card-header>
-                    <img class="border" style="width: 200px; height: 200px;" [src]="desenvolvedor.img" mat-card-avatar>
-                </mat-card-header>
-                <mat-card-content class="">
-                    <mat-card-title>{{desenvolvedor.nome}}</mat-card-title>
-                    <mat-card-subtitle>{{desenvolvedor.funcao}}</mat-card-subtitle>
-                    <p>{{desenvolvedor.tarefas}} </p>
-                    <div class="ferramenta">
-                        <mat-card-title>Ferramentas usadas:</mat-card-title>
-                        <div class="icon-linha">
-                          <div  *ngFor="let icon of desenvolvedor.icons" class="icon-item">
-                            <img [src]="icon.img" alt="">
-                          </div>
-                        </div>
-                      </div>
-                </mat-card-content>
-            </mat-card>
-        </div>
+
+    <div class="desenvolvedor" *ngFor="let desenvolvedor of devs">
+        <mat-card class="card-dev">
+            <mat-card-header>
+                <img class="img-dev" style="width: 200px; height: 200px;" [src]="desenvolvedor.img" mat-card-avatar>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-card-title>{{desenvolvedor.nome}}</mat-card-title>
+                <mat-card-subtitle>{{desenvolvedor.funcao}}</mat-card-subtitle>
+                <p>{{desenvolvedor.tarefas}} </p>
+                <mat-card-title>Ferramentas usadas:</mat-card-title>
+                <div class="ferramenta">
+                    <div *ngFor="let icon of desenvolvedor.icons" class="icon-item">
+                        <img [src]="icon.img" alt="">
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
+<app-rodape></app-rodape>

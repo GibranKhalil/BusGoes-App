@@ -4,13 +4,9 @@
   }
   
   .example-sidenav-content {
-    display: flex;
     min-height: 100vh;
-    flex-direction: column;
     width: 100%;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0px;
   
   }
 

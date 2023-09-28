@@ -1,34 +1,31 @@
 <div class="content">
-    <div class="first">
+    <div class="first width-rodape">
         <div class="txt-resumo">
+            <h1><img src="assets/bus.png"><span>BuscaBus</span></h1>
             <p>Nossa missão é simplificar a recarga de bilhetes e a compra de passagens de transporte público em todo o estado de São Paulo. Investimos constantemente em tecnologia de ponta para garantir que o processo seja rápido e seguro. Além disso, nossa equipe de suporte profissional está disponível para atender às necessidades dos clientes, esclarecer dúvidas e resolver problemas. Nosso objetivo é tornar a experiência dos nossos clientes em todo o estado de São Paulo a mais conveniente possível, contribuindo para uma mobilidade urbana mais eficiente em nossa região.</p>
         </div>
-        <div class="pay" *ngFor="let cards of pays">
-            <img class="icons" [src]="cards.img">
+        <div class="formas-pay">
+            <div class="imgs" *ngFor="let pay of pays">
+                <img class="icons" [src]="pay.img">
+            </div>
         </div>
     </div>
-    <div class="">
-        <h1 id="title-rodape">Passagens</h1>
-        <ul *ngFor="let cidade of cidades">
-            <li class="list-rodape">
-                <a>{{cidade.nome}}</a>
-            </li>
-        </ul>
+    <div class="width-rodape">
+        <h1 class="title-rodape">PASSAGENS</h1>
+        <div class="list" *ngFor="let cidade of cidades">
+            <a class="txt-list">{{cidade.nome}}</a>
+        </div>
     </div>
-    <div class="">
-        <h1 class="title-rodape">Recarga</h1>
-        <ul *ngFor="let bilhete of bilhetes">
-            <li class="list-rodape">
-                <a>{{bilhete.nome}}</a>
-            </li>
-        </ul>
+    <div class="width-rodape">
+        <h1 class="title-rodape">RECARGA</h1>
+        <div class="list" *ngFor="let bilhete of bilhetes">
+            <a class="txt-list">{{bilhete.nome}}</a>
+        </div>
     </div>
-    <div>
-        <h1 class="title-rodape">Ajuda</h1>
-        <ul *ngFor="let help of ajuda">
-            <li class="list-rodape">
-                <a>{{help.nome}}</a>
-            </li>
-        </ul>
+    <div class="width-rodape">
+        <h1 class="title-rodape">AJUDA</h1>
+        <div class="list" *ngFor="let help of ajuda">
+            <a class="txt-list">{{help.nome}}</a>
+        </div>
     </div>
 </div>

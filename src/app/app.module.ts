@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
     MenuComponent,
     RodapeComponent,
     SobreDevsComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 import { RodapeComponent } from './content/rodape/rodape.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'cadastro', component: CadastroComponent},
   {path: 'rodape', component: RodapeComponent},
   { path: 'inicio', component: InicioComponent },
-  { path: 'sobre', component: SobreDevsComponent},
+  {path: 'sobre', component: SobreComponent},
+  { path: 'sobredev', component: SobreDevsComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

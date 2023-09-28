@@ -76,6 +76,9 @@ export class RodapeComponent {
     },
     {
       nome: 'Denunciar Abuso'
+    },
+    {
+      nome: 'Desenvolvedores'
     }
   ];
 
@@ -92,8 +95,5 @@ export class RodapeComponent {
     {
       img: 'assets/elo.png'
     },
-    {
-      img: 'assets/hipercard.png'
-    }
   ]
 }

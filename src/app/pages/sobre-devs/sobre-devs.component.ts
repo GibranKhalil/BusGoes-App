@@ -66,8 +66,12 @@ export class SobreDevsComponent {
           img: 'assets/icons8-php-48.png'
         },
         {
-          nome: 'TypeScript',
+          nome: 'mysql',
           img: 'assets/icons8-mysql-48.png'
+        },
+        {
+          nome: 'JavaScript',
+          img: 'assets/icons8-js-48.png'
         },
         {
           nome: 'HTML',
