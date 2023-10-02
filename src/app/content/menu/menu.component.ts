@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { SharedService } from 'src/app/shared/shared.service';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',

@@ -1,25 +1,38 @@
 <div class="content">
   <div class="elementside">
     <div class="texto">
-      <h1 class="blue-text title">A Melhor plataforma para comprar passagens intermunicipais e recarregar os seus
+      <h1 class=" azul-royal title">A Melhor plataforma para comprar passagens intermunicipais e recarregar os seus
         bilhetes</h1>
-      <h2 class="blue-text sub-title">Conectando Destinos, Criando Memórias.</h2>
-      <div class="checks blue-text">
+      <h2 class="sub-title" style="color: #03246180;">Conectando Destinos, Criando Memórias.</h2>
+      <div class="checks">
         <p><mat-icon class="icon  green-color">check</mat-icon>Facilidade</p>
         <p><mat-icon class="icon green-color">check</mat-icon>Praticidade</p>
         <p><mat-icon class="icon green-color">check</mat-icon>Segurança</p>
       </div>
       
-      <button (click)="rolar('rolar')" class="button" mat-raised-button color="primary">Confira os locais</button>
+      <button (click)="rolar('rolar')" style="background-color: #F9AA33; color: #fff;" class="button" mat-raised-button>Confira os locais</button>
 
     </div>
     <div class="img-inicio">
-      <img src="assets\bus-logo.jpeg">
+      <img src="assets\bus-logo.png">
+    </div>
+  </div>
+
+  <div class="vantagens">
+      <img src="assets\notext-log.png">
+      <h1 class="title">BusGoes: passagens de ônibus intermunicipais e recarga de bilhete único!</h1>
+    <div class="vantagens-txt">
+      <p>Conhecer culturas diferentes, fazer negócios, curtir um festival, fugir das preocupações cotidianas ou reencontrar uma pessoa querida: seja qual for o seu motivo para cair na estrada, sua busca terminou e a gente vai junto com você. Na BusGoes, você pode comprar suas passagens de ônibus intermunicipais online em poucos cliques, sem sair de casa ou enfrentar filas, e ainda pode aproveitar as vantagens da recarga de bilhete único.</p>
+    </div>
+    <div class="vantagens-txt">
+      <p>Na plataforma BusGoes, você recarrega seu bilhete único com total segurança, sem arriscar seus dados pessoais e as suas informações de pagamento.
+        Faça seu pedido da maneira que preferir: dá para pagar com Pix, Mercado Pago, Paypal, transferência bancária ou cartão de crédito (com opção de dividir em até 12 vezes). É simples, rápido e seguro.
+        Garanta sua próxima viagem ou recarregue seu bilhete único num clique com a BusGoes!</p>
     </div>
   </div>
 
   <div class="cards">
-    <h1  id="rolar" class="blue-text font-up bold-up">Veja os Municípios:</h1>
+    <h1  id="rolar" class="font-up bold-up azul-royal">Veja os Municípios:</h1>
     <ngx-slick-carousel  class="carousel" [config]="slickConfig">
       <div  ngxSlickItem *ngFor="let slide of slides">
         <mat-card  class="card-viagens">
@@ -44,16 +57,30 @@
   </div>
 
   
-  <div class="elementside">
+  <div class="bilhete-unico elementside">
     <div class="texto">
       <h1>Tenha a solução completa para recarregar o seu bilhete único diretamente de casa</h1>
-      <p><mat-icon class="icon">check</mat-icon>Totalmente seguro</p>
-      <p><mat-icon class="icon">check</mat-icon>Recarga diretamente em PIX, Débito ou Crédito</p>
-      <p><mat-icon class="icon">check</mat-icon>Cobertura de todos os Municípios do Estado de São Paulo</p>
-      <p><mat-icon class="icon">check</mat-icon>Aceitamos todos os tipos de bilhetes único</p>
+      <p><mat-icon class="icon  green-color">check</mat-icon>Totalmente seguro</p>
+      <p><mat-icon class="icon  green-color">check</mat-icon>Recarga diretamente em PIX, Débito ou Crédito</p>
+      <p><mat-icon class="icon  green-color">check</mat-icon>Cobertura de todos os Municípios do Estado de São Paulo</p>
+      <p><mat-icon class="icon  green-color">check</mat-icon>Aceitamos todos os tipos de bilhetes único</p>
     </div>
     <div class="img-inicio">
-      <img src="assets/bilhete.jpg">
+      <img src="assets/bilhete.png">
+    </div>
+  </div>
+  <div class="ava-content">
+    <div class="avaliacoes" *ngFor="let users of avaliacoes">
+        <mat-card>
+          <mat-card-content>
+            <img class="rating" src="assets/rating.png">
+            <p>{{users.comen}}</p>
+          </mat-card-content>
+          <mat-card-header>
+            <mat-card-title>{{users.nome}}</mat-card-title>
+            <mat-card-subtitle>{{users.desc}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
     </div>
   </div>
   <app-rodape></app-rodape>

@@ -3,13 +3,13 @@
     <button (click)="showmenu()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon >menu</mat-icon>
     </button>
-    <span>Menu</span>
+    <span><img src="assets/logo.png"></span>
     <span class="example-spacer">
       
     </span>
     <span>
-      <button class="botao" routerLink="/login" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>login</mat-icon>Entrar</button>
-      <button class="botao" routerLink="/cadastro" *ngIf="deslogado" mat-raised-button color="primary"><mat-icon>person</mat-icon>Cadastrar</button>
+      <button style="background-color: #0885d8; color: #fff;" routerLink="/login" *ngIf="deslogado" mat-raised-button><mat-icon>login</mat-icon>Entrar</button>
+      <button class="botao" style="background-color: #F9AA33; color: #fff;" routerLink="/cadastro" *ngIf="deslogado" mat-raised-button><mat-icon>person</mat-icon>Cadastrar</button>
         <p class="hud" *ngIf="!deslogado"><mat-icon>account_circle</mat-icon>{{nome}}</p>
     </span>
   </mat-toolbar>

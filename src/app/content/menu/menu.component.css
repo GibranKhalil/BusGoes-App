@@ -3,9 +3,19 @@
   }
 
   mat-toolbar{
-    background: linear-gradient(to bottom, #2E86C1 , #7546f7 );
+    background: linear-gradient(to bottom, #0054ff,#0096C7);
     color: #f2f2f2;
+    display: flex;
+    align-items: center;
   }
+
+  mat-toolbar span img{
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+
 
   .botao{
     margin-left: 20px;
@@ -15,6 +25,8 @@
   .menu{
     width: 100%;
   }
+  
+  
 
   .hud{
     display: flex;
