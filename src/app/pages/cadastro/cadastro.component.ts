@@ -10,18 +10,22 @@ import { ApiService } from 'src/app/shared/autenticador.service';
   styleUrls: ['./cadastro.component.css']
 })
 
+
 export class CadastroComponent implements OnInit {
   angForm: FormGroup;
+  buttonStyle:any = {};
   constructor(private fb: FormBuilder, private dataService: ApiService, private router: Router) {
     this.angForm = this.fb.group({
-      email: ['', [Validators.required, Validators.minLength(1), Validators.email]],
-      password: ['', Validators.required],
-      name: ['', Validators.required],
-      mobile: ['', Validators.required]
+      email: ['', [Validators.required, Validators.minLength(10), Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
+      name: ['', [Validators.required, Validators.minLength(3)]],
     });
   }
 
+  
+
   ngOnInit() {
+
   }
 
   postdata(angForm1: FormGroup) {
@@ -29,10 +33,14 @@ export class CadastroComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['login']);
+          if(this.angForm.valid){
+            this.router.navigate(['login']);
+          }
+          
         },
 
         error => {
+          alert('Verifique os dados')
         });
   }
 

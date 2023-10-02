@@ -6,6 +6,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 import { RodapeComponent } from './content/rodape/rodape.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
+import { RecargaComponent } from './pages/recarga/recarga.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   {path: 'sobre', component: SobreComponent},
   { path: 'sobredev', component: SobreDevsComponent},
+  {path: 'recarga', component: RecargaComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
 

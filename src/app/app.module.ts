@@ -22,6 +22,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
+import { RecargaComponent } from './pages/recarga/recarga.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -34,11 +36,13 @@ import { SobreComponent } from './pages/sobre/sobre.component';
     RodapeComponent,
     SobreDevsComponent,
     SobreComponent,
+    RecargaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
+    MatRadioModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatIconModule,

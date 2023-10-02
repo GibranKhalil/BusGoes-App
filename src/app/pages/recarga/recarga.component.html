@@ -1,0 +1,62 @@
+<div class="content">
+    <form>
+        <mat-card>
+            <mat-card-title>Recarregar Bilhe Único:</mat-card-title>
+        <mat-form-field id="valor">
+            <mat-label>Informe o valor desejado</mat-label>
+            <input matInput placeholder="Valor" type="number" [formControl]="valor" required>
+            <mat-error *ngIf="valor.invalid">{{erro()}}</mat-error>
+        </mat-form-field>
+        <mat-card-subtitle class="subtitle">Escolha a forma de pagamento:</mat-card-subtitle>
+        <mat-radio-group id="radio" [(ngModel)]="pagamento">
+            <mat-radio-button (click)="setpagamento('1')" >Pix</mat-radio-button>
+            <mat-radio-button (click)="setpagamento('2')" >Cartão de Débito</mat-radio-button>
+            <mat-radio-button (click)="setpagamento('3')" >Cartão de Crédito</mat-radio-button>
+        </mat-radio-group>
+        <div id="pix" *ngIf="pagamento === '1'">
+            <mat-card-subtitle class="subtitle">Confirmar Pagamento e gerar chave pix?</mat-card-subtitle>
+            <button mat-button>Sim</button>
+            <button mat-button>Não</button>
+        </div>
+        <div class="paycard" *ngIf="pagamento === '2'">
+            <mat-card-subtitle class="subtitle">Entre com os dados do Cartão de Débito</mat-card-subtitle>
+
+            <mat-form-field>
+                <mat-label>Número do cartão</mat-label>
+                <input matInput required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Nome no cartão</mat-label>
+                <input matInput required>
+            </mat-form-field>
+            <button mat-button>Limpar</button>
+            <button mat-button>Enviar</button>
+        </div>
+        <div class="paycard" *ngIf="pagamento === '3'">
+            <mat-card-subtitle class="subtitle">Entre com os dados do Cartão de Crédito</mat-card-subtitle>
+
+            <mat-form-field>
+                <mat-label>Número do cartão</mat-label>
+                <input matInput required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Nome no cartão</mat-label>
+                <input matInput required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Data de Validade (MM/AAAA)</mat-label>
+                <input matInput required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>CVV</mat-label>
+                <input matInput required>
+            </mat-form-field>
+            
+        </div>
+    </mat-card>
+    </form>
+</div>

@@ -9,7 +9,7 @@
                         <p>Nome: </p>
                         <mat-form-field>
                             <mat-label>Digite seu nome:</mat-label>
-                            <input required matInput type="text" name="nome" formControlName="name">
+                            <input  required matInput type="text" name="nome" formControlName="name">
                         </mat-form-field>
                     </div>
                     <div class="inic-colum">
@@ -26,7 +26,8 @@
                             <input required matInput type="password" name="senha" formControlName="password">
                         </mat-form-field>
                     </div>
-                    <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
+                    <button [disabled]="!angForm.valid" mat-raised-button [style.background]="angForm.valid ? 'linear-gradient(90deg,rgba(249,170,51,1) 0%, rgba(241,192,27,1) 100%)' : '#f2f2f2'"
+                    [style.color]="angForm.valid ? '#fff' : '#000'">Cadastrar</button>
                 </form>
         </mat-card-content>
     </mat-card>

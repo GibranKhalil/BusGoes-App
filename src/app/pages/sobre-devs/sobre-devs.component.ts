@@ -32,6 +32,10 @@ export class SobreDevsComponent {
         {
           nome: 'CSS',
           img: 'assets/icons8-css-48.png'
+        },
+        {
+          nome: 'Photoshop',
+          img: 'assets/photoshop.png'
         }
       ]
     },
