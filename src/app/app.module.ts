@@ -24,6 +24,7 @@ import { SobreDevsComponent } from './pages/sobre-devs/sobre-devs.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { RecargaComponent } from './pages/recarga/recarga.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import {MatRadioModule} from '@angular/material/radio';
     SlickCarouselModule,
     MatRadioModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     HttpClientModule,
     MatIconModule,
     MatCardModule,

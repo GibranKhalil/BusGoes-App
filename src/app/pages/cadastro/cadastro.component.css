@@ -51,3 +51,18 @@ button{
 .margin-bottom{
     margin-bottom: 10px;
 }
+
+@media  screen and (max-width: 767px) {
+    mat-card{
+        width: 300px;
+    }
+
+    mat-card-title{
+        font-size: 24px;
+        margin: 10px;
+    }
+    
+    mat-form-field{
+        width: auto
+    }
+}

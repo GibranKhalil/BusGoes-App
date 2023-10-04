@@ -1,31 +1,56 @@
-html,body{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 
-.slick-prev:before, .slick-next:before{ /*realiza edicao nas setas do carrosel*/
-    color: #000;
-    font-size: 30px;
-  }
+/* Estilizar os botões dos dots */
 
 
+
+.slick-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.slick-dots li{
   
-  
-  .slick-arrow {
-    background-color: transparent;
-    position: absolute;
-    color: white;
-    border-radius: 50%; 
-    font-size: 20px; 
-    font-size: 0;
-    line-height: 30px;
-  }
-  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  margin-right: 5%;
+}
+
+.slick-dots li button:before {
+  font-size: 0px;
+  border: 2px solid #000;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 0;
+
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #F9AA33;
+  transition: background-color 0.5s ease;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,28 +1,42 @@
 .content{
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
 mat-card{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 1300px;
+    width: 80%;
     height: 100%;
     min-height: 300px;
+    border-radius: 10px;
+}
+
+.pix-button{
+    margin: 10px;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 
 #valor{
-    width: 600px;
+    width: 80%;
     margin-top: 20px;
 }
 
 .subtitle{
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 18px;
 }
 
@@ -35,4 +49,12 @@ mat-card{
 .paycard{
     display: flex;
     flex-direction: column;
+}
+
+form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
