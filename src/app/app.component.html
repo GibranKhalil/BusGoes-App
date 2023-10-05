@@ -1,6 +1,6 @@
-<app-menu [Drawer]= "drawer"></app-menu>
-<mat-drawer-container class="example-container" autosize>
 
+<mat-drawer-container class="example-container" autosize>
+    <app-menu [Drawer]= "drawer"></app-menu>
     <mat-drawer #drawer class="example-sidenav" mode="over">
         <mat-list>
             <mat-list-item  routerLink="inicio" (click)="drawer.toggle()"><mat-icon>home</mat-icon><span>Inicio</span></mat-list-item>

@@ -34,13 +34,13 @@
         <mat-card-subtitle class="subtitle">Escolha a forma de pagamento:</mat-card-subtitle>
         <mat-radio-group id="radio" [(ngModel)]="pagamento">
             <mat-radio-button (click)="setpagamento('1')">Pix</mat-radio-button>
-            <mat-radio-button (click)="setpagamento('2')" >Cartão de Débito</mat-radio-button>
+            <mat-radio-button (click)="setpagamento('2')">Cartão de Débito</mat-radio-button>
             <mat-radio-button (click)="setpagamento('3')">Cartão de Crédito</mat-radio-button>
         </mat-radio-group>
         <div id="pix" *ngIf="pagamento === '1'">
             <mat-card-subtitle class="subtitle">Confirmar Pagamento e gerar chave pix?</mat-card-subtitle>
             <button class="pix-button" mat-raised-button (click)="mostrarModalPix()" style="background-color: #27ae60; color: #fff;">Sim</button>
-            <button mat-raised-button class="pix-button" style="background-color: #c70039; color: #ffff;">Não</button>
+            <button mat-raised-button class="pix-button" style="background-color: #c70039; color: #ffff;" >Não</button>
         </div>
 
         <div class="paycard" *ngIf="pagamento === '2'">
@@ -57,7 +57,7 @@
             </mat-form-field>
             <div class="button">
                 <button (click)="mostrarModalCartao()" [disabled]="this.recargaform.get('nomedeb')?.invalid" mat-raised-button style="background-color: #27ae60; color: #fff;">Enviar</button>
-                <button mat-raised-button style="background-color: #c70039; color: #ffff;">Limpar</button>
+                <button mat-raised-button style="background-color: #c70039; color: #ffff;" type="reset">Limpar</button>
             </div>   
         </div>
         <div class="paycard" [formGroup]="recargaform"  *ngIf="pagamento === '3'">
@@ -93,8 +93,8 @@
             </mat-form-field>
 
             <div class="button">
-                <button (click)="mostrarModalCartao()" [disabled]="this.recargaform.get('quantidade')?.invalid" mat-raised-button style="background-color: #27ae60; color: #fff;">Enviar</button>
-                <button mat-raised-button style="background-color: #c70039; color: #ffff;">Limpar</button>
+                <button (click)="mostrarModalCartao()" [disabled]="this.recargaform.get('numerocred')?.invalid" mat-raised-button style="background-color: #27ae60; color: #fff;">Enviar</button>
+                <button mat-raised-button style="background-color: #c70039; color: #ffff;" type="reset">Limpar</button>
             </div>            
         </div>
     </mat-card>

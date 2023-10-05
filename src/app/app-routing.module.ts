@@ -13,9 +13,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
   {path: 'rodape', component: RodapeComponent},
-  { path: 'inicio', component: InicioComponent },
+  {path: 'inicio', component: InicioComponent },
   {path: 'sobre', component: SobreComponent},
-  { path: 'sobredev', component: SobreDevsComponent},
+  {path: 'sobredev', component: SobreDevsComponent},
   {path: 'recarga', component: RecargaComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'}
 ];
