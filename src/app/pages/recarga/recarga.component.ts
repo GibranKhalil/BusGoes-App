@@ -11,11 +11,14 @@ export class RecargaComponent {
   date:string = '00/0000';
   pagamento: string = '1'; //padrao para pix
   recargaform: FormGroup;
+  modalpix:boolean = false;
+  modalcartao:boolean = false;
+  mostrarModal:boolean = false;
 
 
   constructor(private fb: FormBuilder) {
     this.recargaform= this.fb.group({
-      valor: ['', [Validators.required]],
+      valor: ['', [Validators.required,]],
       quantidade: ['', [Validators.required]],
       nomecred: ['', [Validators.required, Validators.minLength(3)]],
       numerocred: ['', [Validators.required, Validators.minLength(16)]],
@@ -25,6 +28,38 @@ export class RecargaComponent {
       numerodeb: ['', [Validators.required, Validators.minLength(16)]],
     });
 
+  }
+
+  mostrarModalPix(){
+    const valor = this.recargaform.get('valor');
+    if(valor?.value <= 600 && valor?.value > 0){
+      this.modalpix = true;
+      this.mostrarModal = true;
+    }
+    else{
+      this.mostrarModal = false;
+      this.modalpix = false;
+      alert("O valor precisa ser menor ou igual que R$600");
+    }
+  }
+
+  mostrarModalCartao(){
+    const valor = this.recargaform.get('valor');
+    if(valor?.value <= 600 && valor?.value > 0){
+      this.modalcartao = true;
+      this.mostrarModal = true;
+    }
+    else{
+      this.mostrarModal = false;
+      this.modalcartao = false;
+      alert("O valor precisa ser menor ou igual que R$600");
+    }
+  }
+
+  fecharmodais(){
+    this.modalcartao = false;
+    this.modalpix = false;
+    this.mostrarModal = false;
   }
 
 
@@ -40,6 +75,12 @@ export class RecargaComponent {
   
   setpagamento(pagamento:string){
     this.pagamento = pagamento;
+    if(pagamento == '2' || pagamento == '3'){
+      this.modalpix = false;
+    }
+    else{
+      this.modalcartao = false;
+    }
   }
 
   

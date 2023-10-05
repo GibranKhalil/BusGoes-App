@@ -4,9 +4,18 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    text-align: center;
+    background-color: transparent;
 }
 
-mat-card{
+.overlay{
+    opacity: 5%;
+    width: 100%;
+    height: 200vh;
+    content: none;
+}
+
+.mat-card-form{
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -58,3 +67,56 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+
+/* modal */
+.modal-container{
+    background-color: #fff;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    z-index: 999;
+    border: 1px solid #000;
+}
+
+.modal{
+    width: 100%;
+    height: auto;
+}
+
+.modal h1{
+    font-size: 30px;
+    margin-bottom: 10%;
+}
+
+.modal h2{
+    background-color: #f2f2f2;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.div-btn-sair {
+    text-align: right;
+}
+
+.fechar-modal {
+    background-color: #c70039; 
+    color: #ffff;
+    text-align: center;
+    box-shadow: 2px 0px 11px -5px rgba(0,0,0,0.33);
+    font-size: 20px;
+    transition: 0.5s;
+    height: 30px;
+}
+
+
+#btn-sim{
+    height: 30px;
+    font-size: 20px;
+    
+}
+
